@@ -695,15 +695,106 @@ void zero() {
   digitalWrite(LED_BUILTIN, LOW);
   delay(125);
 }
+void dot() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
 
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+  
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+}
+void comma() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+  
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+}
+void question() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(375);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+  
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(125);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(125);
+}
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
   Serial.println("morse_code by Proton Local Radio");
   Serial.println("Please Input UPPER CASE text, f is LOWER CASE for translation into morse code");
-  Serial.println("WIP - Notes : punctuation DOES NOT EXIST, yet. f Is LOWER CASE, a bug :(. working on printing what is typed.");
-}
-
+  Serial.println("WIP - Notes : Will blink twice on restart. punctuation DOES EXIST. f Is LOWER CASE, a bug :(. working on printing what is typed.");
+  }
 void loop() {
   if  (Serial.available() > 0)
   {
@@ -714,7 +805,17 @@ void loop() {
       A();
       delay(125);
     }
+        if (letter == 'a')
+    {
+      A();
+      delay(125);
+    }
     else if (letter == 'B')
+    {
+      B();
+      delay(125);
+    }
+    else if (letter == 'b')
     {
       B();
       delay(125);
@@ -891,6 +992,21 @@ void loop() {
     else if (letter == '0')
     {
       zero();
+      delay(125);
+    }
+    else if (letter == '.')
+    {
+      dot();
+      delay(125);
+    }
+    else if (letter == ',')
+    {
+      comma();
+      delay(125);
+    }
+        else if (letter == '?')
+    {
+      comma();
       delay(125);
     }
   }
