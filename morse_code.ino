@@ -699,7 +699,7 @@ void zero() {
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
-  Serial.println("morse_code by Adan");
+  Serial.println("morse_code by Proton Local Radio");
   Serial.println("Please Input UPPER CASE text, f is LOWER CASE for translation into morse code");
   Serial.println("WIP - Notes : punctuation DOES NOT EXIST, yet. f Is LOWER CASE, a bug :(. working on printing what is typed.");
 }
